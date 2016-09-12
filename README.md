@@ -1,1 +1,1 @@
-# PicHunter
+# PicHunter project
