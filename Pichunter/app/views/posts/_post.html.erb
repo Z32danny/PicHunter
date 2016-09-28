@@ -19,6 +19,8 @@
     </div>
 
     <div class="post-bottom">
+
+      <%= render 'posts/likes', post: post %>
       
       <div class="caption">
         <div class="user-name">
@@ -41,8 +43,8 @@
 
     </div>
     <div class="comment-like-form row">
-      <div class="like-button col-sm-1">
-        <span class="glyphicon glyphicon-heart-empty"></span>
+      <div class="col-sm-1">
+        <%= liked_post post %>
       </div>
       <div class="comment-form col-sm-11">
         <%= form_for([post, post.comments.build], remote: true) do |f| %>

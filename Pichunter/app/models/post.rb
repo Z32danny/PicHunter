@@ -1,13 +1,12 @@
 class Post < ApplicationRecord
-	
+	acts_as_votable
+
+
+	belongs_to :user
 	has_many :comments, dependent: :destroy
 
 	validates :user_id, presence: true
-
 	validates :caption, length: {minimum: 3, maximum: 300}
-
-	belongs_to :user
-
 	validates :image, presence: true
 
 	has_attached_file :image, styles: { :medium => "640x" }

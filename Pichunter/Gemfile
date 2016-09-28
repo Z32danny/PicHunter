@@ -32,6 +32,7 @@ gem 'bootstrap-sass'
 gem 'devise'
 gem 'kaminari'
 gem 'jquery-turbolinks'
+gem 'acts_as_votable'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
