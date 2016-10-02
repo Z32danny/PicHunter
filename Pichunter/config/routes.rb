@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
   get 'profiles/show'
 
 	devise_for :users, :controllers => { registrations: 'registrations' }
@@ -11,6 +12,8 @@ Rails.application.routes.draw do
 		    	get 'unlike'
 		    end
 	  	end
+
+	get 'notifications/:id/link_through', to: 'notifications#link_through', as: :link_through
 
 	get 'notifications' => 'notifications#index'
 
